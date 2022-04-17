@@ -5,14 +5,14 @@ console.log('Starting...')
 function createBot () {
     const bot = mineflayer.createBot({
     host: "localhost",
-    port: "25565",
-    username: "Test",
+    port: "25963",
+    username: "bomb",
     version: false
     })
     bot.on('login', function() {
-      bot.chat('/reginster 123123123 123123123')
+      bot.chat('/login 123123123 123123123')
     })
-    bot.on('chat', (username, message) => {
+    bot.on('chat', (bomb, message) => {
       if (username === bot.username) return
       target = bot.players[username].entity
       let entity
